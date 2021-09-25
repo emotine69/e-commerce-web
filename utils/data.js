@@ -1,0 +1,50 @@
+const data = {
+  products: [
+    {
+      name: 'Pork',
+      category: 'Meal',
+      image: '/images/pork.jpg',
+      rating: 4.5,
+      numReviews: 10,
+      countInStock: 20,
+      description: 'Delicious pork',
+    },
+    {
+      name: 'Beef',
+      category: 'Meal',
+      image: '/images/beef.jpg',
+      rating: 4,
+      numReviews: 5,
+      countInStock: 25,
+      description: 'Delicious beef',
+    },
+    {
+      name: 'Sausage',
+      category: 'Food',
+      image: '/images/sausage.jpg',
+      rating: 3.5,
+      numReviews: 20,
+      countInStock: 10,
+      description: 'Delicious sausage',
+    },
+    {
+      name: 'Pizza',
+      category: 'Food',
+      image: '/images/pizza.jpg',
+      rating: 4.0,
+      numReviews: 29,
+      countInStock: 33,
+      description: 'Delicious pizza',
+    },
+    {
+      name: 'Pasta',
+      category: 'Food',
+      image: '/images/pasta.jpg',
+      rating: 4.5,
+      numReviews: 5,
+      countInStock: 12,
+      description: 'Delicious pasta',
+    },
+  ],
+};
+export default data;
