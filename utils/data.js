@@ -2,6 +2,7 @@ const data = {
   products: [
     {
       name: 'Pork',
+      slug: 'pork',
       category: 'Meal',
       image: '/images/pork.jpg',
       rating: 4.5,
@@ -12,6 +13,7 @@ const data = {
     },
     {
       name: 'Beef',
+      slug: 'beef',
       category: 'Meal',
       image: '/images/beef.jpg',
       rating: 4,
@@ -22,6 +24,7 @@ const data = {
     },
     {
       name: 'Sausage',
+      slug: 'sausage',
       category: 'Food',
       image: '/images/sausage.jpg',
       rating: 3.5,
@@ -32,6 +35,7 @@ const data = {
     },
     {
       name: 'Pizza',
+      slug: 'pizza',
       category: 'Food',
       image: '/images/pizza.jpg',
       rating: 4.0,
@@ -42,6 +46,7 @@ const data = {
     },
     {
       name: 'Pasta',
+      slug: 'pasta',
       category: 'Food',
       image: '/images/pasta.jpg',
       rating: 4.5,

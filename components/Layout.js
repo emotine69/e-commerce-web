@@ -6,16 +6,15 @@ import {
   Toolbar,
   Typography,
   Link,
-  Devider,
 } from '@material-ui/core';
 import NextLink from 'next/link';
 
-const Layout = ({ children }) => {
+const Layout = ({ title, children }) => {
   const classes = useStyles();
   return (
     <div>
       <Head>
-        <title>SaigonByNight</title>
+        <title>{title ? `${title} - SaigonByNight` : 'SaigonByNight'}</title>
       </Head>
       <AppBar position="static" className={classes.navbar}>
         <Toolbar>
