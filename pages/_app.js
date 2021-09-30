@@ -1,6 +1,6 @@
-import { jssPreset } from '@material-ui/styles';
 import { useEffect } from 'react';
 import '../styles/globals.css';
+
 
 function MyApp({ Component, pageProps }) {
   useEffect(() => {

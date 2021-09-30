@@ -3,7 +3,7 @@ const data = {
     {
       name: 'Pork',
       slug: 'pork',
-      category: 'Meal',
+      category: 'Meat',
       image: '/images/pork.jpg',
       rating: 4.5,
       price: 10,
@@ -14,7 +14,7 @@ const data = {
     {
       name: 'Beef',
       slug: 'beef',
-      category: 'Meal',
+      category: 'Meat',
       image: '/images/beef.jpg',
       rating: 4,
       price: 20,
