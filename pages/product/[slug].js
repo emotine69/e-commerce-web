@@ -31,7 +31,7 @@ export default function Product() {
       <div className={classes.section}>
         <NextLink href="/" passHref>
           <Typography variant="button" style={{ fontWeight: 'bold' }}>
-            <Link>Go back to homepage</Link>
+            <Link color="text.secondary">Go back to homepage</Link>
           </Typography>
         </NextLink>
       </div>

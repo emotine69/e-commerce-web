@@ -16,10 +16,10 @@ export default function Home() {
   return (
     <Layout>
       <div>
-        <h1>Products</h1>
+        <h1 align="center">Products</h1>
         <Grid container spacing={3}>
           {data.products.map((product) => (
-            <Grid item md={4} key={product.name}>
+            <Grid item md={3} key={product.name}>
               <Card>
                 <NextLink href={`/product/${product.slug}`} passHref>
                   <CardActionArea>
@@ -38,7 +38,7 @@ export default function Home() {
                 </NextLink>
                 <CardActions>
                   <Typography>${product.price}</Typography>
-                  <Button variant="outlined" color="primary">
+                  <Button variant="outlined" color="secondary">
                     Add to cart
                   </Button>
                 </CardActions>

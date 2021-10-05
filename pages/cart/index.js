@@ -1,8 +1,11 @@
+import Layout from '../../components/Layout';
 const cart = () => {
   return (
-    <div>
-      <h1>Cart</h1>
-    </div>
+    <Layout>
+      <div>
+        <h1>Cart</h1>
+      </div>
+    </Layout>
   );
 };
 

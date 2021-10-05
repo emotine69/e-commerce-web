@@ -1,8 +1,11 @@
+import Layout from '../../components/Layout';
 const login = () => {
   return (
-    <div>
-      <h1>login </h1>
-    </div>
+    <Layout>
+      <div>
+        <h1>login </h1>
+      </div>
+    </Layout>
   );
 };
 
