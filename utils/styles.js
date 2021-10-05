@@ -5,15 +5,18 @@ const useStyles = makeStyles({
     backgroundColor: '#203040',
     '& a': {
       color: '#ffffff',
-      marginLeft: 10,
+      marginLeft: 25,
       fontSize: '1.5rem',
+      fontWeight: 'bold',
     },
   },
 
   brand: {
     fontWeight: 'bold',
     fontSize: '1.5rem',
+    fontFamily: 'Classique-Saigon',
   },
+
   grow: {
     flexGrow: 1,
   },

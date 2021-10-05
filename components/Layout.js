@@ -15,12 +15,16 @@ import NextLink from 'next/link';
 import { useContext } from 'react';
 import { Store } from '../utils/store';
 import Cookies from 'js-cookie';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import LoginIcon from '@mui/icons-material/Login';
+import { fontFamily, fontStyle } from '@mui/system';
 
 const Layout = ({ title, description, children }) => {
   const { state, dispatch } = useContext(Store);
   const { darkMode } = state;
   const theme = createTheme({
     typography: {
+      fontFamily: `"Roboto", "Helvetica", "Arial", "sans-serif","Chilanka"`,
       h1: {
         fontSize: '1.6rem',
         fontWeight: 400,
@@ -56,7 +60,7 @@ const Layout = ({ title, description, children }) => {
       </Head>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        <AppBar position="static" className={classes.navbar}>
+        <AppBar position="sticky" className={classes.navbar}>
           <Toolbar>
             <NextLink href="/" passHref>
               <Link>
@@ -70,10 +74,16 @@ const Layout = ({ title, description, children }) => {
                 onChange={darkModeChangeHandler}
               ></Switch>
               <NextLink href="/cart" passHref>
-                <Link>Cart</Link>
+                <Link>
+                  <ShoppingCartIcon />
+                  Cart
+                </Link>
               </NextLink>
               <NextLink href="/login" passHref>
-                <Link>Login</Link>
+                <Link>
+                  <LoginIcon />
+                  Login
+                </Link>
               </NextLink>
             </div>
           </Toolbar>
