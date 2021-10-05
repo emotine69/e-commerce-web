@@ -10,6 +10,7 @@ import {
   ThemeProvider,
   CssBaseline,
   Switch,
+  TextField,
 } from '@material-ui/core';
 import NextLink from 'next/link';
 import { useContext } from 'react';
@@ -17,7 +18,6 @@ import { Store } from '../utils/store';
 import Cookies from 'js-cookie';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import LoginIcon from '@mui/icons-material/Login';
-import { fontFamily, fontStyle } from '@mui/system';
 
 const Layout = ({ title, description, children }) => {
   const { state, dispatch } = useContext(Store);

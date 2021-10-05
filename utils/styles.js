@@ -14,7 +14,7 @@ const useStyles = makeStyles({
   brand: {
     fontWeight: 'bold',
     fontSize: '1.5rem',
-    fontFamily: 'Classique-Saigon',
+    fontFamily: 'Dancing Script',
   },
 
   grow: {

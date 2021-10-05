@@ -13,6 +13,7 @@ import { useRouter } from 'next/router';
 import Layout from '../../components/Layout';
 import useStyles from '../../utils/styles';
 import data from '../../utils/data';
+import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 
 export default function Product() {
   const classes = useStyles();
@@ -99,6 +100,7 @@ export default function Product() {
                   variant="contained"
                   color="primary"
                 >
+                  <AddShoppingCartIcon />
                   Add to cart
                 </Button>
               </ListItem>

@@ -7,15 +7,38 @@ import {
   CardContent,
   CardActions,
   Button,
+  TextField,
 } from '@material-ui/core';
 import Layout from '../components/Layout';
 import data from '../utils/data';
 import NextLink from 'next/link';
+import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
+import { Box } from '@mui/system';
+import { InputAdornment } from '@material-ui/core';
+import SearchIcon from '@mui/icons-material/Search';
+import { IconButton } from '@mui/material';
 
 export default function Home() {
   return (
     <Layout>
-      <div>
+      <Box m={2} pt={3}>
+        <Box>
+          <TextField
+            fullWidth
+            variant="outlined"
+            label="Looking for something"
+            color="secondary"
+            InputProps={{
+              endAdornment: (
+                <InputAdornment position="end">
+                  <IconButton>
+                    <SearchIcon />
+                  </IconButton>
+                </InputAdornment>
+              ),
+            }}
+          />
+        </Box>
         <h1 align="center">Products</h1>
         <Grid container spacing={3}>
           {data.products.map((product) => (
@@ -39,14 +62,14 @@ export default function Home() {
                 <CardActions>
                   <Typography>${product.price}</Typography>
                   <Button variant="outlined" color="secondary">
-                    Add to cart
+                    <AddShoppingCartIcon /> Add to cart
                   </Button>
                 </CardActions>
               </Card>
             </Grid>
           ))}
         </Grid>
-      </div>
+      </Box>
     </Layout>
   );
 }
