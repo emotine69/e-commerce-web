@@ -14,31 +14,14 @@ import data from '../utils/data';
 import NextLink from 'next/link';
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import { Box } from '@mui/system';
-import { InputAdornment } from '@material-ui/core';
-import SearchIcon from '@mui/icons-material/Search';
-import { IconButton } from '@mui/material';
+import SearchBar from '../components/SearchBar';
 
 export default function Home() {
+  // const suggestions = ['Pizza', 'Pasta', 'Beef', 'Pork', 'Sausage'];
   return (
     <Layout>
       <Box m={2} pt={3}>
-        <Box>
-          <TextField
-            fullWidth
-            variant="outlined"
-            label="Looking for something"
-            color="secondary"
-            InputProps={{
-              endAdornment: (
-                <InputAdornment position="end">
-                  <IconButton>
-                    <SearchIcon />
-                  </IconButton>
-                </InputAdornment>
-              ),
-            }}
-          />
-        </Box>
+        <SearchBar suggestions={data.products} />
         <h1 align="center">Products</h1>
         <Grid container spacing={3}>
           {data.products.map((product) => (
@@ -68,6 +51,7 @@ export default function Home() {
               </Card>
             </Grid>
           ))}
+          ,
         </Grid>
       </Box>
     </Layout>

@@ -1,9 +1,10 @@
 import Layout from '../../components/Layout';
+import Login from '../../components/Login';
 const login = () => {
   return (
     <Layout>
       <div>
-        <h1>login </h1>
+        <Login />
       </div>
     </Layout>
   );
