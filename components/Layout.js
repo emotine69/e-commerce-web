@@ -39,7 +39,7 @@ const Layout = ({ title, description, children }) => {
     palette: {
       type: darkMode ? 'dark' : 'light',
       primary: {
-        main: '#f0c000',
+        main: '#154c79',
       },
       secondary: {
         main: '#208080',

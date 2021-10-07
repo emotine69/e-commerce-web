@@ -7,7 +7,6 @@ import {
   CardContent,
   CardActions,
   Button,
-  TextField,
 } from '@material-ui/core';
 import Layout from '../components/Layout';
 import data from '../utils/data';
@@ -17,11 +16,10 @@ import { Box } from '@mui/system';
 import SearchBar from '../components/SearchBar';
 
 export default function Home() {
-  // const suggestions = ['Pizza', 'Pasta', 'Beef', 'Pork', 'Sausage'];
   return (
     <Layout>
       <Box m={2} pt={3}>
-        <SearchBar suggestions={data.products} />
+        <SearchBar suggestions={data.products.map((product) => product.name)} />
         <h1 align="center">Products</h1>
         <Grid container spacing={3}>
           {data.products.map((product) => (
@@ -51,7 +49,6 @@ export default function Home() {
               </Card>
             </Grid>
           ))}
-          ,
         </Grid>
       </Box>
     </Layout>

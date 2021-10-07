@@ -1,10 +1,11 @@
 import Layout from '../../components/Layout';
-import Login from '../../components/Login';
+import LoginSignup from '../../components/container/index';
+
 const login = () => {
   return (
     <Layout>
       <div>
-        <Login />
+        <LoginSignup />
       </div>
     </Layout>
   );

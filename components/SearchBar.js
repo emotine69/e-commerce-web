@@ -37,7 +37,7 @@ const SearchBar = ({ suggestions }) => {
 
   const SuggestionListComponent = () => {
     return filteredSuggestions.length ? (
-      <ul class="suggestions">
+      <ul class="suggestions" style={{ listStyleType: 'none' }}>
         {filteredSuggestions.map((suggestion, index) => {
           let className;
 
