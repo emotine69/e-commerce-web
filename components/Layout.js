@@ -60,7 +60,11 @@ const Layout = ({ title, description, children }) => {
       </Head>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        <AppBar position="sticky" className={classes.navbar}>
+        <AppBar
+          position="sticky"
+          className={classes.navbar}
+          style={{ backgroundColor: darkMode ? '#040d21' : '#154c79' }}
+        >
           <Toolbar>
             <NextLink href="/" passHref>
               <Link>
