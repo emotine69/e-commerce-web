@@ -3,11 +3,13 @@ import LoginSignup from '../../components/container/index';
 
 const login = () => {
   return (
-    <Layout>
-      <div>
-        <LoginSignup />
-      </div>
-    </Layout>
+    <>
+      <Layout>
+        <div>
+          <LoginSignup />
+        </div>
+      </Layout>
+    </>
   );
 };
 

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   Avatar,
   Grid,
@@ -24,54 +24,85 @@ const Login = () => {
     backgroundColor: '#154c79',
   };
 
+  const [user, setUser] = useState('');
+  const [pass, setPass] = useState('');
+  const [checked, setChecked] = useState(false);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(user, pass, checked);
+    setUser('');
+    setPass('');
+  };
   return (
     <>
       <Grid>
         <Paper elevation={10} style={paperStyle}>
-          <Grid align="center">
-            <Avatar style={avatarStyle}>
-              <LockOutlinedIcon />
-            </Avatar>
-            <h2>Sign In</h2>
-          </Grid>
-          <TextField
-            label="Username"
-            placeholder="Enter Username"
-            fullWidth
-            required
-          />
-          <TextField
-            label="Password"
-            placeholder="Enter Password"
-            fullWidth
-            required
-            type="password"
-          />
-          <FormControlLabel
-            control={<Checkbox name="checked" color="primary" />}
-            label="Remember me"
-          />
-          <Button
-            type="submit"
-            color="primary"
-            variant="contained"
-            fullWidth
-            style={{ margin: '10px 0' }}
-          >
-            Sign in
-          </Button>
-          <Typography>
-            <Link href="#" color="secondary">
-              Forgot password ?
-            </Link>
-          </Typography>
-          <Typography>
-            Don't have account ?
-            <Link href="signup" color="secondary">
-              {' '}
-              Sign up
-            </Link>
-          </Typography>
+          <div>
+            <Grid align="center">
+              <Avatar style={avatarStyle}>
+                <LockOutlinedIcon />
+              </Avatar>
+              <h2>Sign In</h2>
+            </Grid>
+          </div>
+          <div>
+            <form onSubmit={handleSubmit}>
+              <TextField
+                label="Username"
+                placeholder="Enter Username"
+                fullWidth
+                required
+                type="text"
+                name="username"
+                value={user}
+                onChange={(e) => setUser(e.target.value)}
+              />
+              <TextField
+                label="Password"
+                placeholder="Enter Password"
+                fullWidth
+                required
+                type="password"
+                name="password"
+                value={pass}
+                onChange={(e) => setPass(e.target.value)}
+              />
+              <FormControlLabel
+                control={
+                  <Checkbox
+                    name="remember"
+                    color="primary"
+                    onChange={(e) => setChecked(e.target.checked)}
+                  />
+                }
+                label="Remember me"
+              />
+              <Button
+                type="submit"
+                color="primary"
+                variant="contained"
+                fullWidth
+                style={{ margin: '10px 0' }}
+              >
+                Sign in
+              </Button>
+            </form>
+          </div>
+          <div>
+            <Typography>
+              <Link href="#" color="secondary">
+                Forgot password ?
+              </Link>
+            </Typography>
+            <Typography>
+              Don't have account ?
+              <Link href="signup" color="secondary">
+                {' '}
+                Sign up
+              </Link>
+            </Typography>
+          </div>
         </Paper>
       </Grid>
     </>
