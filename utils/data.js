@@ -3,7 +3,7 @@ const data = {
     {
       name: 'Pork',
       slug: 'pork',
-      category: 'Meat',
+      category: 'meat',
       image: '/images/pork.jpg',
       rating: 4.5,
       price: 10,
@@ -14,7 +14,7 @@ const data = {
     {
       name: 'Beef',
       slug: 'beef',
-      category: 'Meat',
+      category: 'meat',
       image: '/images/beef.jpg',
       rating: 4,
       price: 20,
@@ -25,7 +25,7 @@ const data = {
     {
       name: 'Sausage',
       slug: 'sausage',
-      category: 'Food',
+      category: 'food',
       image: '/images/sausage.jpg',
       rating: 3.5,
       price: 5,
@@ -36,7 +36,7 @@ const data = {
     {
       name: 'Pizza',
       slug: 'pizza',
-      category: 'Food',
+      category: 'food',
       image: '/images/pizza.jpg',
       rating: 4.0,
       price: 7,
@@ -47,7 +47,7 @@ const data = {
     {
       name: 'Pasta',
       slug: 'pasta',
-      category: 'Food',
+      category: 'food',
       image: '/images/pasta.jpg',
       rating: 4.5,
       price: 8,
@@ -57,4 +57,4 @@ const data = {
     },
   ],
 };
-export default data;
+export default data;  
